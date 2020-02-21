@@ -26,6 +26,7 @@ public class UsersAction {
 	@GetMapping("loginIn")
 	public String loginIn(Users users, HttpSession session, Model model) throws Exception {
 		System.out.println("第一次修改");
+		System.out.println("第二次修改");
 		for (Users temp : data) {
 			if (temp.getUserName().equals(users.getUserName()) && temp.getUserPwd().equals(users.getUserPwd())) {
 				session.setAttribute("USERS", temp);
